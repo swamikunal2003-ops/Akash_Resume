@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aakash Raj — Graphic Designer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-view="home">
+
+  <div class="viewport-frame">
+    <!-- Background Stage: Smoothly crossfades & blurs between Image 1 (Sharp) and Image 2 (Blurred) -->
+    <div class="bg-stage">
+      <div class="bg-layer bg-sharp"></div>
+      <div class="bg-layer bg-blurred"></div>
+      <div class="bg-vignette"></div>
+    </div>
+
+    <!-- Apple Floating Liquid Glass Navigation Bar -->
+    <nav class="top-glass-nav" aria-label="Primary Navigation">
+      <button class="nav-pill active" data-target="home">Home</button>
+      <button class="nav-pill" data-target="menu">Menu</button>
+      <div class="nav-divider"></div>
+      <button class="nav-pill" data-target="portfolio">Portfolio</button>
+      <button class="nav-pill" data-target="about">About</button>
+      <button class="nav-pill" data-target="contact">Contact</button>
+    </nav>
+
+    <!-- VIEW 1: HERO LANDING (IMAGE 1 STYLE REFERENCE) -->
+    <section id="view-home" class="view-section is-active" aria-label="Home">
+      <div class="home-enter-pill">
+        <span>Click Anywhere to Explore</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- VIEW 2: GLASS MENU HUB (IMAGE 2 STYLE REFERENCE) -->
+    <section id="view-menu" class="view-section" aria-label="Menu">
+      <div class="menu-stack">
+        <button class="apple-glass-btn" data-target="portfolio">PORTFOLIO</button>
+        <button class="apple-glass-btn" data-target="contact">CONTACT</button>
+        <button class="apple-glass-btn" data-target="about">ABOUT</button>
+      </div>
+    </section>
+
+    <!-- VIEW 3: PORTFOLIO SECTION (ALL PROJECTS & SLIDES FROM PORTFOLIO.PDF) -->
+    <section id="view-portfolio" class="view-section" aria-label="Portfolio">
+      <div class="glass-window">
+        <header class="window-header">
+          <div class="window-header-left">
+            <button class="back-glass-btn" data-action="back-to-menu">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+              Menu
+            </button>
+            <h1 class="window-title">Portfolio</h1>
+          </div>
+          <div class="window-actions">
+            <a href="assets/Portfolio.pdf" download class="action-glass-btn">
+              Download Portfolio PDF
+            </a>
+          </div>
+        </header>
+
+        <div class="window-body">
+          <div class="portfolio-controls">
+            <div class="filter-pills">
+              <button class="filter-btn active" data-filter="all">All Projects (15)</button>
+              <button class="filter-btn" data-filter="logo">Logo Design</button>
+              <button class="filter-btn" data-filter="identity">Brand Identity</button>
+              <button class="filter-btn" data-filter="collabs">Brand Collabs</button>
+              <button class="filter-btn" data-filter="photography">Photography</button>
+              <button class="filter-btn" data-filter="product">Product Design</button>
+              <button class="filter-btn" data-filter="slides">Full Presentation Slides (10)</button>
+            </div>
+          </div>
+
+          <div id="portfolio-grid" class="portfolio-grid">
+            <article class="project-card" data-category="logo" data-lightbox-src="assets/portfolio/slide-3.jpg" data-lightbox-title="Logo Design — Cafe 9 & ONE">
+              <div class="project-thumb-wrap">
+                <img src="assets/portfolio/crop-cafe9.jpg" alt="Cafe 9 Logo Design" loading="lazy" />
+                <span class="project-badge">Logo Design</span>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Cafe 9</h3>
+                <p class="project-desc">Custom café logo identity combining expressive script typography with heart-inspired numeral iconography.</p>
+                <div class="project-meta">
+                  <div class="swatch-group">
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#D4404C"></span>#D4404C</span>
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#1E0305"></span>#1E0305</span>
+                  </div>
+                  <span class="font-tag">Font: Gabriola</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="logo" data-lightbox-src="assets/portfolio/slide-3.jpg" data-lightbox-title="Logo Design — ONE Fruit & Botanical">
+              <div class="project-thumb-wrap">
+                <img src="assets/portfolio/crop-one-logo.jpg" alt="ONE Logo Design" loading="lazy" />
+                <span class="project-badge">Logo Design</span>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">ONE</h3>
+                <p class="project-desc">Organic fruit and foliage wordmark crafted for the beverage brand ONE with vibrant botanical illustrations.</p>
+                <div class="project-meta">
+                  <div class="swatch-group">
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#DC4926"></span>#DC4926</span>
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#1B4A23"></span>#1B4A23</span>
+                  </div>
+                  <span class="font-tag">Font: Gabriola</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="logo" data-lightbox-src="assets/portfolio/slide-4.jpg" data-lightbox-title="Logo Design — Hotel Heritage (Since 1937)">
+              <div class="project-thumb-wrap">
+                <img src="assets/portfolio/crop-heritage.jpg" alt="Hotel Heritage Logo" loading="lazy" />
+                <span class="project-badge">Logo Design</span>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Hotel Heritage (Since 1937)</h3>
+                <p class="project-desc">Traditional hospitality crest uniting cultural welcome motifs within a geometric gold and crimson pentagon emblem.</p>
+                <div class="project-meta">
+                  <div class="swatch-group">
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#AA802D"></span>#AA802D</span>
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#B72026"></span>#B72026</span>
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#07090A"></span>#07090A</span>
+                  </div>
+                  <span class="font-tag">Ananda Namaste</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="logo" data-lightbox-src="assets/portfolio/slide-4.jpg" data-lightbox-title="Logo Design — Negative Space P Monogram">
+              <div class="project-thumb-wrap">
+                <img src="assets/portfolio/crop-monogram.jpg" alt="P Monogram Logo" loading="lazy" />
+                <span class="project-badge">Logo Design</span>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Negative-Space 'P' Mark</h3>
+                <p class="project-desc">Monochromatic symbol integrating a chess pawn silhouette inside the counter of the letter P.</p>
+                <div class="project-meta">
+                  <div class="swatch-group">
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#232121"></span>#232121</span>
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#F7F5F5"></span>#F7F5F5</span>
+                  </div>
+                  <span class="font-tag">NewsGoth BT</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="identity" data-lightbox-src="assets/portfolio/slide-5.jpg" data-lightbox-title="Brand Identity — Sky is Blue Film Production">
+              <div class="project-thumb-wrap">
+                <img src="assets/portfolio/crop-skyblue-id.jpg" alt="Sky is Blue Brand Identity" loading="lazy" />
+                <span class="project-badge">Brand Identity</span>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Sky is Blue — Film Production</h3>
+                <p class="project-desc">Complete corporate stationery and visual identity suite for the film production house "Sky is Blue", including business cards, letterhead, and envelope.</p>
+                <div class="project-meta">
+                  <span class="font-tag">Stationery & Identity System</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="collabs" data-lightbox-src="assets/portfolio/slide-6.jpg" data-lightbox-title="Brand Collabs — Pizza Hut Social Campaign">
+              <div class="project-thumb-wrap">
+                <img src="assets/portfolio/crop-pizzahut.jpg" alt="Pizza Hut Social Media Design" loading="lazy" />
+                <span class="project-badge">Brand Collab</span>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Pizza Hut</h3>
+                <p class="project-desc">High-energy promotional social media visual designed for Pizza Hut featuring app download incentives and combo deals.</p>
+                <div class="project-meta">
+                  <div class="swatch-group">
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#E80706"></span>#E80706</span>
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#E6A805"></span>#E6A805</span>
+                  </div>
+                  <span class="font-tag">Social Media</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="collabs" data-lightbox-src="assets/portfolio/slide-6.jpg" data-lightbox-title="Brand Collabs — Date Cafe Campaign Banner">
+              <div class="project-thumb-wrap">
+                <img src="assets/portfolio/crop-datecafe-banner.jpg" alt="Date Cafe Banner Design" loading="lazy" />
+                <span class="project-badge">Brand Collab</span>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Date Cafe — Campaign Banner</h3>
+                <p class="project-desc">"We Make Your Memories More Tasty" promotional banner design created in collaboration with Date Cafe.</p>
+                <div class="project-meta">
+                  <div class="swatch-group">
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#CDBEA6"></span>#CDBEA6</span>
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#572C15"></span>#572C15</span>
+                  </div>
+                  <span class="font-tag">Banner Design</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="collabs" data-lightbox-src="assets/portfolio/slide-7.jpg" data-lightbox-title="Brand Collabs — Date Cafe Menu">
+              <div class="project-thumb-wrap">
+                <img src="assets/portfolio/crop-datecafe-menu.jpg" alt="Date Cafe Menu Design" loading="lazy" />
+                <span class="project-badge">Brand Collab</span>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Date Cafe — Beverage Menu</h3>
+                <p class="project-desc">Multi-panel illustrated beverage and refreshment menu layout crafted in collaboration with Date Cafe.</p>
+                <div class="project-meta">
+                  <div class="swatch-group">
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#562113"></span>#562113</span>
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#C39C71"></span>#C39C71</span>
+                  </div>
+                  <span class="font-tag">Print & Menu</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="collabs" data-lightbox-src="assets/portfolio/slide-7.jpg" data-lightbox-title="Brand Collabs — Wasabi 15 Asian Casual Dine">
+              <div class="project-thumb-wrap">
+                <img src="assets/portfolio/crop-wasabi15.jpg" alt="Wasabi 15 Social Post" loading="lazy" />
+                <span class="project-badge">Brand Collab</span>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Wasabi 15</h3>
+                <p class="project-desc">Social media creative showcasing sushi platters for Wasabi 15 Asian Casual Dine.</p>
+                <div class="project-meta">
+                  <div class="swatch-group">
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#AFD139"></span>#AFD139</span>
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#EE5698"></span>#EE5698</span>
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#001C00"></span>#001C00</span>
+                  </div>
+                  <span class="font-tag">Social Media</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="photography" data-lightbox-src="assets/portfolio/slide-8.jpg" data-lightbox-title="Photography — Kaldi's Berry">
+              <div class="project-thumb-wrap">
+                <img src="assets/portfolio/crop-kaldis.jpg" alt="Kaldi's Berry Photoshoot" loading="lazy" />
+                <span class="project-badge">Photography</span>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Kaldi's Berry</h3>
+                <p class="project-desc">Warm latte art product photoshoot and social media post design ("Coffee taste sweet, When drink with favorite person").</p>
+                <div class="project-meta">
+                  <div class="swatch-group">
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#3F3E2A"></span>#3F3E2A</span>
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#88622A"></span>#88622A</span>
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#7B2419"></span>#7B2419</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="photography" data-lightbox-src="assets/portfolio/slide-8.jpg" data-lightbox-title="Photography — Melt Cafe">
+              <div class="project-thumb-wrap">
+                <img src="assets/portfolio/crop-melt.jpg" alt="Melt Cafe Korean Corndog" loading="lazy" />
+                <span class="project-badge">Photography</span>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Melt Cafe</h3>
+                <p class="project-desc">Overhead food styling, photoshoot, and hand-drawn doodle promotional post for Melt Cafe's Korean Corndog.</p>
+                <div class="project-meta">
+                  <div class="swatch-group">
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#B49AA8"></span>#B49AA8</span>
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#81B1C7"></span>#81B1C7</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="photography" data-lightbox-src="assets/portfolio/slide-8.jpg" data-lightbox-title="Photography — Khandoli Nitin's Canteen">
+              <div class="project-thumb-wrap">
+                <img src="assets/portfolio/crop-khandoli.jpg" alt="Khandoli Photoshoot" loading="lazy" />
+                <span class="project-badge">Photography</span>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Khandoli — Nitin's Canteen</h3>
+                <p class="project-desc">Product photoshoot and social media visual ("It feels Eggcellent, when you enjoy the tastes of our food").</p>
+                <div class="project-meta">
+                  <div class="swatch-group">
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#B47312"></span>#B47312</span>
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#9E3005"></span>#9E3005</span>
+                    <span class="color-swatch"><span class="swatch-dot" style="background:#D4C6B4"></span>#D4C6B4</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="product" data-lightbox-src="assets/portfolio/slide-9.jpg" data-lightbox-title="Product Design — ONE Juice Packaging Dieline">
+              <div class="project-thumb-wrap">
+                <img src="assets/portfolio/crop-one-pack.jpg" alt="ONE Product Packaging" loading="lazy" />
+                <span class="project-badge">Product Design</span>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">ONE — Juice Packaging</h3>
+                <p class="project-desc">Hexagonal structural packaging dieline and surface graphics for the juice company "One".</p>
+                <div class="project-meta">
+                  <span class="font-tag">Packaging Dieline</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="product" data-lightbox-src="assets/portfolio/slide-9.jpg" data-lightbox-title="Product Design — Sky is Blue Entertainment App">
+              <div class="project-thumb-wrap">
+                <img src="assets/portfolio/crop-skyblue-app.jpg" alt="Sky is Blue App Design" loading="lazy" />
+                <span class="project-badge">UI / Web Design</span>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Sky is Blue — Entertainment App</h3>
+                <p class="project-desc">Web and mobile application interface design for the "Sky is Blue" entertainment streaming platform.</p>
+                <div class="project-meta">
+                  <span class="font-tag">App & Web UI</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="product" data-lightbox-src="assets/portfolio/slide-9.jpg" data-lightbox-title="Product Design — Biotique Bio Cucumber Packaging">
+              <div class="project-thumb-wrap">
+                <img src="assets/portfolio/crop-biotique.jpg" alt="Biotique Packaging Design" loading="lazy" />
+                <span class="project-badge">Product Design</span>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Biotique — Bio Cucumber</h3>
+                <p class="project-desc">Botanical skincare product packaging layout and print dieline created for Biotique.</p>
+                <div class="project-meta">
+                  <span class="font-tag">Cosmetic Packaging</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div id="deck-grid" class="deck-grid">
+            <div class="slide-card" data-lightbox-src="assets/portfolio/slide-1.jpg" data-lightbox-title="Slide 01 — Portfolio Cover">
+              <img src="assets/portfolio/slide-1.jpg" alt="Slide 1" loading="lazy" />
+              <div class="slide-caption"><span>Slide 01 — Cover</span><span>Click to Expand</span></div>
+            </div>
+            <div class="slide-card" data-lightbox-src="assets/portfolio/slide-2.jpg" data-lightbox-title="Slide 02 — Introduction & Tools">
+              <img src="assets/portfolio/slide-2.jpg" alt="Slide 2" loading="lazy" />
+              <div class="slide-caption"><span>Slide 02 — Introduction</span><span>Click to Expand</span></div>
+            </div>
+            <div class="slide-card" data-lightbox-src="assets/portfolio/slide-3.jpg" data-lightbox-title="Slide 03 — Logo Design (Cafe 9 & ONE)">
+              <img src="assets/portfolio/slide-3.jpg" alt="Slide 3" loading="lazy" />
+              <div class="slide-caption"><span>Slide 03 — Logos I</span><span>Click to Expand</span></div>
+            </div>
+            <div class="slide-card" data-lightbox-src="assets/portfolio/slide-4.jpg" data-lightbox-title="Slide 04 — Logo Design (Hotel Heritage & Monogram)">
+              <img src="assets/portfolio/slide-4.jpg" alt="Slide 4" loading="lazy" />
+              <div class="slide-caption"><span>Slide 04 — Logos II</span><span>Click to Expand</span></div>
+            </div>
+            <div class="slide-card" data-lightbox-src="assets/portfolio/slide-5.jpg" data-lightbox-title="Slide 05 — Brand Identity (Sky is Blue)">
+              <img src="assets/portfolio/slide-5.jpg" alt="Slide 5" loading="lazy" />
+              <div class="slide-caption"><span>Slide 05 — Brand Identity</span><span>Click to Expand</span></div>
+            </div>
+            <div class="slide-card" data-lightbox-src="assets/portfolio/slide-6.jpg" data-lightbox-title="Slide 06 — Brand Collabs (Pizza Hut & Date Cafe)">
+              <img src="assets/portfolio/slide-6.jpg" alt="Slide 6" loading="lazy" />
+              <div class="slide-caption"><span>Slide 06 — Brand Collabs I</span><span>Click to Expand</span></div>
+            </div>
+            <div class="slide-card" data-lightbox-src="assets/portfolio/slide-7.jpg" data-lightbox-title="Slide 07 — Brand Collabs (Date Cafe Menu & Wasabi 15)">
+              <img src="assets/portfolio/slide-7.jpg" alt="Slide 7" loading="lazy" />
+              <div class="slide-caption"><span>Slide 07 — Brand Collabs II</span><span>Click to Expand</span></div>
+            </div>
+            <div class="slide-card" data-lightbox-src="assets/portfolio/slide-8.jpg" data-lightbox-title="Slide 08 — Photography Showcase">
+              <img src="assets/portfolio/slide-8.jpg" alt="Slide 8" loading="lazy" />
+              <div class="slide-caption"><span>Slide 08 — Photography</span><span>Click to Expand</span></div>
+            </div>
+            <div class="slide-card" data-lightbox-src="assets/portfolio/slide-9.jpg" data-lightbox-title="Slide 09 — Product Design">
+              <img src="assets/portfolio/slide-9.jpg" alt="Slide 9" loading="lazy" />
+              <div class="slide-caption"><span>Slide 09 — Product Design</span><span>Click to Expand</span></div>
+            </div>
+            <div class="slide-card" data-lightbox-src="assets/portfolio/slide-10.jpg" data-lightbox-title="Slide 10 — Thank You">
+              <img src="assets/portfolio/slide-10.jpg" alt="Slide 10" loading="lazy" />
+              <div class="slide-caption"><span>Slide 10 — Closing Note</span><span>Click to Expand</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 4: ABOUT SECTION (RESUME & PORTFOLIO INTRODUCTION DETAILS) -->
+    <section id="view-about" class="view-section" aria-label="About">
+      <div class="glass-window">
+        <header class="window-header">
+          <div class="window-header-left">
+            <button class="back-glass-btn" data-action="back-to-menu">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+              Menu
+            </button>
+            <h1 class="window-title">About Me</h1>
+          </div>
+          <div class="window-actions">
+            <a href="assets/Resume.pdf" download class="action-glass-btn">
+              Download Resume PDF
+            </a>
+          </div>
+        </header>
+
+        <div class="window-body">
+          <div class="about-bento">
+            <aside class="profile-glass-card">
+              <div class="profile-avatar-wrap">
+                <img src="assets/profile.jpg" alt="Aakash Raj" />
+              </div>
+              <h2 class="profile-name">Aakash Raj</h2>
+              <p class="profile-role">Graphic Designer</p>
+              <div class="profile-badge-list">
+                <span class="profile-badge">B.Sc. Animation &amp; VFX</span>
+                <span class="profile-badge">Freelancer (2022–Present)</span>
+              </div>
+              <p class="profile-quote">
+                "Being an artist, Being me. That was my best excuse for being crazy."
+              </p>
+            </aside>
+
+            <div class="about-details-col">
+              <div class="detail-glass-box">
+                <div class="detail-box-title">Profile Summary</div>
+                <p class="bio-paragraph">
+                  Proficient in Digital Marketing, Video Editing, Graphic &amp; Motion Designing, Product Shooting, Video &amp; Photo Shooting, and Colour Correction. I see the future as an opportunity for more experiences, and I will be happy to work with you!
+                </p>
+              </div>
+
+              <div class="detail-glass-box">
+                <div class="detail-box-title">Education &amp; Experience</div>
+                <div class="timeline-grid">
+                  <div class="timeline-item">
+                    <span class="timeline-period">Jun 2021 – Jul 2025</span>
+                    <h3 class="timeline-heading">B.Sc. Animation &amp; VFX</h3>
+                    <p class="timeline-sub">
+                      Gained proficiency in graphic design principles, including typography, color theory, and layout design, applied in animation and visual projects.
+                    </p>
+                  </div>
+                  <div class="timeline-item">
+                    <span class="timeline-period">2022 – Present</span>
+                    <h3 class="timeline-heading">Freelance Designer &amp; Visual Creator</h3>
+                    <p class="timeline-sub">
+                      Delivering brand identities, logo systems, food &amp; product photography, packaging dielines, and social media campaigns for hospitality and retail brands.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="detail-glass-box">
+                <div class="detail-box-title">Software &amp; Creative Tools</div>
+                <div class="skills-list">
+                  <div class="skill-row">
+                    <div class="skill-top"><span>Adobe Illustrator</span><span>90%</span></div>
+                    <div class="skill-dots">
+                      <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span>
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-top"><span>Adobe Photoshop</span><span>85%</span></div>
+                    <div class="skill-dots">
+                      <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span><span class="skill-dot"></span>
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-top"><span>Adobe Premiere Pro</span><span>85%</span></div>
+                    <div class="skill-dots">
+                      <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span><span class="skill-dot"></span>
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-top"><span>Adobe After Effects</span><span>75%</span></div>
+                    <div class="skill-dots">
+                      <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span>
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-top"><span>DaVinci Resolve</span><span>65%</span></div>
+                    <div class="skill-dots">
+                      <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 5: CONTACT SECTION (DIRECT RESUME DETAILS & QUICK EMAIL COMPOSER) -->
+    <section id="view-contact" class="view-section" aria-label="Contact">
+      <div class="glass-window">
+        <header class="window-header">
+          <div class="window-header-left">
+            <button class="back-glass-btn" data-action="back-to-menu">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+              Menu
+            </button>
+            <h1 class="window-title">Contact</h1>
+          </div>
+          <div class="window-actions">
+            <a href="mailto:whereismycloud27@gmail.com" class="action-glass-btn">
+              Email Directly
+            </a>
+          </div>
+        </header>
+
+        <div class="window-body">
+          <div class="contact-bento">
+            <div class="contact-cards-col">
+              <div class="contact-item-card">
+                <div class="contact-item-left">
+                  <div class="contact-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-label">Full Name &amp; Role</div>
+                    <div class="contact-value">Aakash Raj — Graphic Designer</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-item-card">
+                <div class="contact-item-left">
+                  <div class="contact-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-label">Email Address</div>
+                    <div class="contact-value">whereismycloud27@gmail.com</div>
+                  </div>
+                </div>
+                <button class="copy-pill-btn" data-copy="whereismycloud27@gmail.com">Copy</button>
+              </div>
+
+              <div class="contact-item-card">
+                <div class="contact-item-left">
+                  <div class="contact-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-label">Phone Number</div>
+                    <div class="contact-value">+91 7766041113</div>
+                  </div>
+                </div>
+                <button class="copy-pill-btn" data-copy="7766041113">Copy</button>
+              </div>
+
+              <div class="contact-item-card">
+                <div class="contact-item-left">
+                  <div class="contact-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-label">Downloads</div>
+                    <div class="contact-value">Resume &amp; Full Portfolio Deck</div>
+                  </div>
+                </div>
+                <div style="display:flex; gap:8px;">
+                  <a href="assets/Resume.pdf" download class="copy-pill-btn" style="text-decoration:none;">Resume</a>
+                  <a href="assets/Portfolio.pdf" download class="copy-pill-btn" style="text-decoration:none;">Portfolio</a>
+                </div>
+              </div>
+            </div>
+
+            <form id="contact-form" class="contact-form-card">
+              <div class="detail-box-title" style="margin-bottom:2px;">Send a Message</div>
+              <div class="form-group">
+                <label for="sender-name">Your Name</label>
+                <input type="text" id="sender-name" class="glass-input" placeholder="Enter your name" required />
+              </div>
+              <div class="form-group">
+                <label for="sender-email">Your Email</label>
+                <input type="email" id="sender-email" class="glass-input" placeholder="name@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="sender-subject">Subject</label>
+                <input type="text" id="sender-subject" class="glass-input" placeholder="Brand Identity / Video Editing / Collaboration" required />
+              </div>
+              <div class="form-group">
+                <label for="sender-message">Project Details</label>
+                <textarea id="sender-message" class="glass-input" placeholder="Tell me about your project timeline and goals..." required></textarea>
+              </div>
+              <button type="submit" class="submit-glass-btn">Compose Email</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true">
+      <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Portfolio Full View" />
+        <div class="lightbox-bar">
+          <span id="lightbox-title" class="lightbox-title">Portfolio Preview</span>
+          <button id="lightbox-close" class="lightbox-close">Close (Esc)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
