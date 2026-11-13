@@ -510,7 +510,7 @@ body:not([data-view="home"]) .bg-vignette {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
   gap: 22px;
 }
 
@@ -634,7 +634,7 @@ body:not([data-view="home"]) .bg-vignette {
 
 .deck-grid {
   display: none;
-  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
   gap: 24px;
 }
 
@@ -1098,6 +1098,13 @@ textarea.glass-input {
     top: 14px;
     padding: 5px 8px;
     gap: 4px;
+    max-width: 95vw;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+  }
+  .top-glass-nav::-webkit-scrollbar {
+    display: none;
   }
   .nav-pill {
     padding: 7px 12px;
